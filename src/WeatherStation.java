@@ -22,7 +22,7 @@ public class WeatherStation {
 	 * @param t initial temperature measure
 	 * @param p initial pressure measure 
 	 */
-	public WeatherStation (double t, double p) {
+	public WeatherStation(double t, double p) {
 		/* Your Task */
         observers = new ArrayList<>();
         temperature = t;
@@ -35,7 +35,7 @@ public class WeatherStation {
 	 * Add the input o to the list of subscribed observers. 
 	 * @param o a weather observer
 	 */
-	public void subscribe (WeatherObserver o) {
+	public void subscribe(WeatherObserver o) {
 		/* Your Task */
         o.setWeatherStation(this);
         if (!observers.contains(o))
@@ -49,7 +49,7 @@ public class WeatherStation {
 	 * Assume that the input o is an already-subscribed observer.  
 	 * @param o a weather observer
 	 */
-	public void unsubscribe (WeatherObserver o) {
+	public void unsubscribe(WeatherObserver o) {
 		/* Your Task */
         o.setWeatherStation(null);
         observers.remove(o);
